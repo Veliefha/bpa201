@@ -1,25 +1,150 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{D6FC739D-6AD2-45A8-9DDB-D5874C7DE252}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6FC739D-6AD2-45A8-9DDB-D5874C7DE252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6FC739D-6AD2-45A8-9DDB-D5874C7DE252}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6FC739D-6AD2-45A8-9DDB-D5874C7DE252}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6FC739D-6AD2-45A8-9DDB-D5874C7DE252}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5D20D4CD-C1BF-4287-AD78-4E05DEF7B236}
-	EndGlobalSection
-EndGlobal
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region
+            // İstifadəçidən 5 ədəd daxil etməsini istə və onları massivdə saxla.
+            //Daha sonra bu massivdəki elementlərin ümumi cəmini ekrana çıxar.
+
+            /*int[] nums = new int[5];
+            int s = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                nums[i] = int.Parse(Console.ReadLine());
+            }
+
+                foreach (int num in nums)
+             {
+                s += num;
+             }
+                Console.WriteLine(s);
+            */
+
+            #endregion
+            #region
+            //Massivdə olan bütün ədədləri böyüyə doğru sırala və ekrana çıxar.
+            /*int[] arr = { 3, 6, 4, 8, 2 };
+            Array.Sort(arr);
+            foreach(int num in arr)
+            {
+                Console.WriteLine(num);
+            }*/
+
+
+            #endregion
+            #region
+            //Massivdə olan bütün ədədləri tərsinə çevir və ekrana çıxar
+            /*int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Array.Reverse(arr);
+            foreach(int i in arr)
+            {
+                Console.WriteLine(i);
+            }*/
+
+            #endregion
+            #region
+            //Massivdə ən böyük və ən kiçik ədədi tap və ekrana çıxar.
+            /*int[] arr = { 2, 4, 3, 6, 33, 4, 77, 2, 5, 1, 23, 87 };
+            int min=arr[0];
+            int max=arr[0];
+            for(int i=0; i<arr.Length; i++)
+            {
+                if (min > arr[i])
+                {
+                    min = arr[i];
+                    
+                }
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                {
+                    max = arr[i];
+                    
+            }
+           
+            }
+            Console.WriteLine(min);
+            Console.WriteLine(max);*/
+
+
+            #endregion
+            #region
+            //Massivdə müəyyən bir ədədin mövcud olub-olmadığını yoxla.
+            // Əgər varsa “tapıldı”, yoxdursa “tapılmadı” mesajı çıxar.
+            /* int[] arr={ 1,2,5,3,8,44,6,5,8};
+             int num = 7;
+             if (arr.Contains(num))
+             {
+                 Console.WriteLine("tapildi");
+             }
+             else
+             {
+                 Console.WriteLine("tapilmadi");
+             }*/
+
+            #endregion
+            #region
+            //2 fərqli ədədlər massivini bir massivdə birləşdir və ekrana çıxar.
+            /*int[] arr1 = { 1, 2, 3, 4, 5 };
+            int[] arr2 = { 6, 7, 8, 9, 10 };
+            int[] newarr = new int[arr1.Length+arr2.Length];
+            Array.Copy(arr1,0,newarr,0,5);
+            Array.Copy(arr2,0, newarr,arr1.Length, 5);
+            foreach(int i in newarr)
+            {
+                Console.WriteLine(i);
+            }*/
+
+            #endregion
+            #region
+            //Massivdəki təkrarlanan elementləri çıxar və unikal ədədləri ekrana yaz.
+
+            /*int[] arr = { 1, 5, 3, 6, 4, 7, 4, 6, 2, 8, 4, 6, 3, 4 };
+            foreach (int num in arr)
+            {
+                // Əgər num massivdə yalnız 1 dəfə varsa, çap et
+                if (arr.Count(x => x == num) == 1)
+                {
+                    Console.WriteLine(num);
+                }
+            }*/
+            #endregion
+            #region
+            //Massivdəki bütün ədədlərin orta qiymətini hesabla və ekrana çıxar.
+            /* int[] arr = { 6,18,9};
+             int s = 0;
+             for(int i = 0; i < arr.Length; i++)
+             {
+                 s += arr[i];
+
+             }
+             int result = s / (arr.Length + 1);
+             Console.WriteLine(result);*/
+            #endregion
+            #region
+            //Massivdəki elementlərin hamısını bir stringə çevir, aralarında - qoy (məsələn: "1-2-3-4").
+            /* int[] arr = { 1, 2, 3, 4 };
+
+             string result = String.Join("-", arr);
+
+             Console.WriteLine(result);*/
+
+            #endregion
+            #region
+            //Bir massivdəki ilk 3 elementi başqa bir masssivə köçür və yeni massivdə saxla.
+           /* int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int[] newarr = new int [3];
+            Array.Copy(arr, newarr, 3);
+            foreach(int i in newarr)
+            {
+                Console.WriteLine(i);
+            }*/
+            
+            #endregion
+        }
+    }
+}
+
+
+
